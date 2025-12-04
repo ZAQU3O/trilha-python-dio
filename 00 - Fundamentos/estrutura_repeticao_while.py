@@ -1,7 +1,12 @@
 opcao = -1
 
 while opcao != 0:
-    opcao = int(input("[1] Sacar \n[2] Extrato \n[0] Sair \n: "))
+    opcao = int(input('''
+                                MENU PRINCIPAL
+    [1] Sacar 
+    [2] Extrato 
+    [0] Sair: 
+    '''))
 
     if opcao == 1:
         print("Sacando...")

@@ -1,5 +1,7 @@
+saldo = 500
+
 def sacar(valor):
-    saldo = 500
+    global saldo
 
     if saldo >= valor:
         print("valor sacado!")
@@ -9,8 +11,23 @@ def sacar(valor):
 
 
 def depositar(valor):
-    saldo = 500
+    global saldo
     saldo += valor
+
+    print(f"Depósito de R$ {valor} realizado com sucesso!")
+    print(f"Seu saldo atual é R$ {saldo}")
+
+def extrato():
+    global saldo
+    print(f'''
+    ******* EXTRATO *******
+    
+    SALDO: R$ {saldo}
+    ************************
+    ''')
 
 
 sacar(1000)
+extrato()
+depositar(500)
+extrato()
